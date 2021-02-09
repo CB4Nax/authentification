@@ -1,7 +1,7 @@
 const express = require("express");
-const apiRoutes = require("./Server/routes/router")
+const apiRoutes = require("./Server/routes/router");
 const app = express();
 
 app.use(express.json());
-
+app.use("/mezoir",apiRoutes)
 app.listen(process.env.PORT || "3000", function(){console.log("server is running")}); 
